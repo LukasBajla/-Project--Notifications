@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Frontend Mentor | Notifications page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin: 2rem 0;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cont-title">
+        <div class="cont-title-notif">
+          <h3>Notifications</h3>
+          <!-- <p id="notif-count">1</p> -->
+        </div>
+
+        <button id="btn-MarkAllAsRead" class="btn-MAAR">Mark all as read</button>
+      </div>
+      <div class="cont-content">
+
+        <div class="cont">
+          <div class="cont-avatar">
+            <img src="assets/images/avatar-mark-webber.webp" alt="A_MarkW" />
+          </div>
+          <div class="cont-text">
+            <a id="name">Mark Webber</a>
+            <p id="description-text">reacted to your recent post</p>
+            <p id="post">My first tournament today!</p>
+            <i class="fa-solid fa-circle hidden" id="icon-unread"></i>
+            <p id="time">1m ago</p>
+          </div>
+        </div>
+
+        <div class="cont">
+          <div class="cont-avatar">
+            <img src="assets/images/avatar-angela-gray.webp" alt="A_AngelaG" />
+          </div>
+          <div class="cont-text">
+            <a id="name">Angela Gray</a>
+            <p id="description-text">followed you!</p>
+            <i id="icon-unread" class="fa-solid fa-circle hidden"></i>
+            <p id="time">5m ago</p>
+          </div>
+        </div>
+
+        <div class="cont">
+          <div class="cont-avatar">
+            <img
+              src="assets/images/avatar-jacob-thompson.webp"
+              alt="A_JacobT"
+            />
+          </div>
+          <div class="cont-text">
+            <a id="name">Jacob Thompson</a>
+            <p id="description-text">has joined your group</p>
+            <p id="group">Chess Club</p>
+            <i id="icon-unread" class="fa-solid fa-circle hidden" ></i>
+            <p id="time">1 day ago</p>
+          </div>
+        </div>
+
+        <div class="cont">
+          <div class="cont-avatar">
+            <img
+              src="assets/images/avatar-rizky-hasanuddin.webp"
+              alt="A_MarkW"
+            />
+          </div>
+          <div class="cont-text">
+            <a id="name">Rizky Hasanuddin</a>
+            <p id="description-text">sent you a private message</p>
+            <p id="event"></p>
+            <i id="icon-unread" class="fa-solid fa-circle hidden"></i>
+            <p id="time">5 days ago</p>
+            <p id="private-message">
+              Hello, thanks for setting up the Chess Club. I've been a member
+              for a few weeks now and I'm already having lots of fun and
+              improving my game.
+            </p>
+          </div>
+        </div>
+
+        <div class="cont">
+          <div class="cont-avatar">
+            <img
+              src="assets/images/avatar-kimberly-smith.webp"
+              alt="A_KimberlyS"
+            />
+          </div>
+          <div class="cont-text">
+            <a id="name">Kimberly Smith</a>
+            <p id="description-text">commented on your picture</p>
+            <p id="event"></p>
+            <i id="icon-unread" class="fa-solid fa-circle hidden"></i>
+            <p id="time">1 week ago</p>
+          </div>
+          <div class="cont-image">
+            <img
+              id="image"
+              src="./assets/images/image-chess.webp"
+              alt="Notif_Img_Chess"
+            />
+          </div>
+        </div>
+
+        <div class="cont">
+          <div class="cont-avatar">
+            <img
+              src="assets/images/avatar-nathan-peterson.webp"
+              alt="A_NathanP"
+            />
+          </div>
+          <div class="cont-text">
+            <a id="name">Nathan Peterson</a>
+            <p id="description-text">reacted to your recent post</p>
+            <p id="post">5 end-game strategies to increase your win rate</p>
+            <i id="icon-unread" class="fa-solid fa-circle hidden"></i>
+            <p id="time">2 weeks ago</p>
+          </div>
+        </div>
+
+        <div class="cont">
+          <div class="cont-avatar">
+            <img src="assets/images/avatar-anna-kim.webp" alt="A_AnaK" />
+          </div>
+          <div class="cont-text">
+            <a id="name">Anna Kim</a>
+            <p id="description-text">left the group</p>
+            <p id="group">Chess Club</p>
+            <i id="icon-unread" class="fa-solid fa-circle hidden"></i>
+            <p id="time">2 weeks ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Lukas Bajla</a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
