@@ -2,10 +2,10 @@
   --red: hsl(1, 90%, 64%);
   --blue: hsl(219, 85%, 26%);
 
-  --clr-dark-primary-200: #4a77ca;
+  --clr-dark-primary-200: #3960aa;
   --clr-dark-primary-400: #104fc7;
-  --clr-dark-primary-600: #222a38;
-  --clr-dark-primary-700: #20223075;
+  --clr-dark-primary-600: #242533;
+  --clr-dark-primary-700: #1c1d27;
   --clr-dark-primary-800: #17181f;
   --clr-dark-secondary: #a57732;
   --clr-dark-secondary-dark: #4d391b;
@@ -145,7 +145,7 @@ button {
   }
   .btn-MAAR-unread {
     background-color: var(--clr-dark-primary-200);
-    color: var(--clr-dark-primary-800);
+    color: var(--clr-dark-neutral-10);
     padding: .6em 1em;
     border-radius: 8px;
     transition: background-color .2s ease-in-out, color .2s ease-in-out;
@@ -291,6 +291,6 @@ p[id="time"] {
 
 @media (prefers-color-scheme: dark) {
   .unread {
-    background-color: var(--clr-dark-primary-700);
+    background-color: var(--clr-dark-primary-600);
   }
 }
