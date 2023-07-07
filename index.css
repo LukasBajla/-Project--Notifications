@@ -1,6 +1,19 @@
 :root {
   --red: hsl(1, 90%, 64%);
   --blue: hsl(219, 85%, 26%);
+
+  --clr-dark-primary-200: #4a77ca;
+  --clr-dark-primary-400: #104fc7;
+  --clr-dark-primary-600: #222a38;
+  --clr-dark-primary-700: #20223075;
+  --clr-dark-primary-800: #17181f;
+  --clr-dark-secondary: #a57732;
+  --clr-dark-secondary-dark: #4d391b;
+  --clr-dark-neutral-100: #000;
+  --clr-dark-neutral-80: #3d3d3d;
+  --clr-dark-neutral-60: #666666;
+  --clr-dark-neutral-40: #a3a3a3;
+  --clr-dark-neutral-10: #fff;
 }
 
 @font-face {
@@ -19,6 +32,7 @@
 html {
   font-size: 16px;
   font-family: Jakarta_Medium;
+  color-scheme: light dark;
 }
 *,
 *::after,
@@ -38,9 +52,14 @@ p {
   color: hsl(219, 12%, 42%);
 }
 
-.container a {
+
+
+
+a {
   color: hsl(224, 21%, 14%);
   font-weight: 800;
+  transition: 0.2s ease-in-out;
+  transition-property: color, opacity;
 }
 a:hover {
   cursor: pointer;
@@ -53,12 +72,33 @@ button {
   background-color: inherit;
 }
 
+@media (prefers-color-scheme: dark) {
+  p {
+    color: var(--clr-dark-neutral-40);
+  }
+  a {
+    color: var(--clr-dark-primary-400);
+  }
+  a:hover {
+    color: var(--clr-dark-primary-400);
+    opacity: 0.5;
+
+  }
+}
+
 .container {
   margin-bottom: 0.5rem;
   padding: 0 0.3em 2em 0.3em;
   border-radius: 0 0 1.5rem 1.5rem;
   box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.3);
 }
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: var(--clr-dark-primary-800);
+  }
+}
+
 .cont-title {
   display: flex;
   justify-content: space-between;
@@ -76,6 +116,7 @@ button {
   margin-left: 0.7em;
   background-color: var(--blue);
   border-radius: 0.2em;
+  transition: color 2s ease-in-out
 }
 .btn-MAAR {
   color: hsl(219, 14%, 63%);
@@ -85,6 +126,31 @@ button {
 .btn-MAAR-unread {
   color: var(--blue);
   font-weight: 800;
+  transition: opacity .2s ease-in-out
+}
+.btn-MAAR-unread:hover {
+  opacity: .3;
+}
+
+@media (prefers-color-scheme: dark) {
+  #notif-count {
+    background-color: var(--clr-dark-primary-200);
+  }
+  .btn-MAAR {
+    color: var(--clr-dark-neutral-80);
+  }
+  .btn-MAAR-unread {
+    background-color: var(--clr-dark-primary-200);
+    color: var(--clr-dark-primary-800);
+    padding: .6em 1em;
+    border-radius: 8px;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  }
+  .btn-MAAR-unread:hover {
+    opacity: 1;
+    background-color: var(--clr-dark-primary-700);
+    color: var(--clr-dark-primary-200);
+  }
 }
 
 .cont-content {
@@ -140,13 +206,19 @@ button {
 p[id="time"] {
   color: hsl(219, 14%, 63%);
 }
+@media (prefers-color-scheme: dark) {
+  p[id="time"] {
+    color: var(--clr-dark-neutral-60)
+  }
+}
 #post {
   font-family: Jakarta_ExtraBold;
   color: hsl(219, 12%, 42%);
+  transition: color 0.2s ease-in-out,
+  text-decoration .2s ease-in-out;
 }
-#post:hover {
+  #post:hover {
   cursor: pointer;
-  color: var(--blue);
   text-decoration: underline;
 }
 #group {
@@ -159,20 +231,37 @@ p[id="time"] {
 }
 #private-message {
   display: block;
-  border: 1px solid hsl(219, 24%, 75%);
+  border: 1px solid hsl(210, 43%, 95%);
   border-radius: 8px;
   font-size: 0.9em;
   padding: 1.2em;
   margin-top: 1em;
+  transition: background-color 0.2s ease-in-out,
+  border .2s ease-in-out;
 }
 #private-message:hover {
   cursor: pointer;
   background-color: hsl(210, 43%, 95%);
-  border: 1px solid hsl(210, 43%, 95%);
-
 }
 #image {
   width: 2.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+  #post {
+    color: var(--clr-dark-secondary);
+  }
+  #group {
+    color: var(--clr-dark-secondary);
+  }
+  #private-message {
+    border: 2px solid var(--clr-dark-primary-700);
+  }
+  #private-message:hover {
+    background-color: var(--clr-dark-primary-700);
+    border: 2px solid var(--clr-dark-primary-800);
+
+  }
 }
 
 @media (min-width: 40em) {
@@ -186,7 +275,6 @@ p[id="time"] {
   }
 }
 
-
 .hidden,
 .cont-text .hidden {
   display: none;
@@ -195,4 +283,10 @@ p[id="time"] {
   background-color: hsl(210, 43%, 95%);
   border-radius: 1em;
   animation: 3s ease-in-out anim-unread;
+}
+
+@media (prefers-color-scheme: dark) {
+  .unread {
+    background-color: var(--clr-dark-primary-700);
+  }
 }
