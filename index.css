@@ -52,7 +52,11 @@ p {
   color: hsl(219, 12%, 42%);
 }
 
-
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--clr-dark-primary-800);
+  }
+}
 
 
 a {
@@ -95,7 +99,7 @@ button {
 
 @media (prefers-color-scheme: dark) {
   .container {
-    background-color: var(--clr-dark-primary-800);
+    background-color: var(--clr-dark-primary-700);
   }
 }
 
@@ -258,7 +262,7 @@ p[id="time"] {
     border: 2px solid var(--clr-dark-primary-700);
   }
   #private-message:hover {
-    background-color: var(--clr-dark-primary-700);
+    background-color: var(--clr-dark-primary-800);
     border: 2px solid var(--clr-dark-primary-800);
 
   }
