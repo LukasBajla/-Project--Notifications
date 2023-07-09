@@ -3,7 +3,7 @@
   --blue: hsl(219, 85%, 26%);
 
   --clr-dark-primary-200: #3960aa;
-  --clr-dark-primary-400: #104fc7;
+  --clr-dark-primary-400: #2e5fbb;
   --clr-dark-primary-600: #242533;
   --clr-dark-primary-700: #1c1d27;
   --clr-dark-primary-800: #17181f;
@@ -46,7 +46,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3em 0;
 }
 p {
   color: hsl(219, 12%, 42%);
@@ -269,6 +268,9 @@ p[id="time"] {
 }
 
 @media (min-width: 40em) {
+  body {
+    padding: 3em 0;
+  }
   .container {
     margin: 0 auto;
     max-width: 500px;
